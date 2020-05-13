@@ -6,7 +6,7 @@ public class Suit
     public Suit (String suitName, int suitValue)
     {
         name = suitName;
-        value=suitValue;
+        value = suitValue;
     }
 
     public Suit (String suitName)
