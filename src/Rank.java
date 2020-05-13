@@ -11,7 +11,7 @@ public class Rank
 
     public String toString()
     {
-        return name;
+    return name;
     }
 
     public int getValue()

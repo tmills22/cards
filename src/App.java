@@ -6,5 +6,4 @@ public class App extends PApplet
     {
         PApplet.main("App");
     }
-
 }
