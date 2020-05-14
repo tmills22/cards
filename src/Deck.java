@@ -3,6 +3,7 @@ public class Deck
     private Card[] allCards;
     private int top = 0;
 
+    // Creating all ranks.
     private Rank ace = new Rank("Ace", 1);
     private Rank two = new Rank("Two", 2);
     private Rank three = new Rank("Three", 3);
@@ -16,14 +17,18 @@ public class Deck
     private Rank jack = new Rank("Jack", 11);
     private Rank queen = new Rank("Queen", 12);
     private Rank king = new Rank("King", 13);
+    // Array of all ranks.
     private Rank[] allRanks = {ace, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king};
 
+    // Creating all suits.
     private Suit club = new Suit("Club", 1);
     private Suit diamond = new Suit("Diamond", 2);
     private Suit heart = new Suit("Heart", 3);
     private Suit spade = new Suit("Spade", 4);
+    // Array of all suits.
     private Suit[] allSuits = {club, diamond, heart, spade};
 
+    // Creation if 52 card deck (allCards array).
     public Deck()
     {
         allCards = new Card[52];
@@ -33,6 +38,7 @@ public class Deck
         }
     }
 
+    // Deals (returns) the top card (starts at 0 and goes up).
     public Card deal()
     {
         if(top < allCards.length)
@@ -44,6 +50,7 @@ public class Deck
         return null;
     }
 
+    // Swtiches two random cards 26 times (half the amount of the allCards array).
     public void shuffle()
     {
         for(int i = 0; i < allCards.length/2; i++)
@@ -57,6 +64,7 @@ public class Deck
         }
     }
 
+    // Converts all data in the Deck array to a string then returns (loops the length of the allCards array)
     public String toString()
     {
         String s = "";
