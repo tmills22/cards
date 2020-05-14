@@ -28,7 +28,7 @@ public class Deck
     // Array of all suits.
     private Suit[] allSuits = {club, diamond, heart, spade};
 
-    // Creation if 52 card deck (allCards array).
+    // Creates 52 card deck (allCards arra y).
     public Deck()
     {
         allCards = new Card[52];
