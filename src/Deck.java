@@ -1,6 +1,7 @@
 public class Deck
 {
     private Card[] allCards;
+    private int top = 0;
 
     private Rank ace = new Rank("Ace", 1);
     private Rank two = new Rank("Two", 2);
@@ -32,13 +33,36 @@ public class Deck
         }
     }
 
+    public Card deal()
+    {
+        if(top < allCards.length)
+        {
+            Card currentCard = allCards[top];
+            top++;
+            return currentCard;
+        }
+        return null;
+    }
+
+    public void shuffle()
+    {
+        for(int i = 0; i < allCards.length/2; i++)
+        {
+            int r1 = (int) (Math.random() * 52);
+            int r2 = (int) (Math.random() * 52);
+
+            Card temp = allCards[r1];
+            allCards[r1] = allCards[r2];
+            allCards[r2] = temp;
+        }
+    }
+
     public String toString()
     {
         String s = "";
-        int cardSize = allCards.length;
-        for (int i = 0; i < cardSize; i++)
+        for (int i = 0; i < allCards.length; i++)
         {
-            s = s + allCards[i].toString() + "   ";
+            s = s + allCards[i].toString() + "\n";
         }
         return s;
     }
