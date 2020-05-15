@@ -28,12 +28,11 @@ public class Deck
     // Array of all suits.
     private Suit[] allSuits = {club, diamond, heart, spade};
 
-    // Creates 52 card deck (allCards arra y).
+    // Creates 52 card deck (allCards array).
     public Deck()
     {
         allCards = new Card[52];
-        int cardSize = allCards.length;
-        for (int i = 0; i < cardSize; i++) {
+        for (int i = 0; i < allCards.length; i++) {
             allCards[i] = new Card(allRanks[i%13],allSuits[i%4]);
         }
     }
